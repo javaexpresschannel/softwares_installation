@@ -1,0 +1,78 @@
+Steps to install java:
+----------------------
+sudo apt install openjdk-8-jre-headless
+java -version
+
+Steps to install Maven
+----------------------
+sudo apt install maven
+
+Steps to install Git
+----------------------
+sudo apt install git
+
+Steps to install Jenkins
+----------------------
+sudo apt install jenkins
+sudo sysemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl restart jenkins
+sudo systemctl enable jenkins ( Bootup start)
+
+
+How to find out java path in Ubuntu ?
+-------------------------------------
+find /usr/lib/jvm/java-1.8* | head -3
+
+How to remove java manually from ubuntu ?
+-------------------------------------
+sudo rm -rf /usr/lib/jvm/*
+
+
+Issues while installating java in Ubuntu
+-------------------------------------
+'1) sudo apt install openjdk-8-jre-headless ( depend on which version u are installating)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+openjdk-8-jre-headless is already the newest version (8u131-b11-2ubuntu1.16.04.3).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+
+2) sudo apt install openjdk-8-jre-headless --reinstall
+
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 0 not upgraded.
+Need to get 0 B/27.0 MB of archives.
+After this operation, 0 B of additional disk space will be used.
+(Reading database ... 160472 files and directories currently installed.)
+Preparing to unpack .../openjdk-8-jre-headless_8u131-b11-2ubuntu1.16.04.3_amd64.deb ...
+Unpacking openjdk-8-jre-headless:amd64 (8u131-b11-2ubuntu1.16.04.3) over (8u131-b11-2ubuntu1.16.04.3) ...
+Setting up openjdk-8-jre-headless:amd64 (8u131-b11-2ubuntu1.16.04.3) ...
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) doesn't exist; removing from list of alternatives
+update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/java (part of link group java) 
+
+if still facing to install java then remove total java software from ubuntu machine
+
+3)sudo apt remove --purge openjdk-8-jre-headless ( depend on which version u are installating)
+4)sudo apt autoremove
+5)sudo apt install --reinstall openjdk-8-jre-headless
+6)java -version
+
+java -version
+openjdk version "1.8.0_131"
+OpenJDK Runtime Environment (build 1.8.0_131-8u131-b11-2ubuntu1.16.04.3-b11)
+OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)
+
+
+
