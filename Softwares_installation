@@ -29,6 +29,15 @@ How to remove java manually from ubuntu ?
 sudo rm -rf /usr/lib/jvm/*
 
 
+How to give sudo permissions for jenkins user in Ubuntu machine?
+
+Open a file using vi editor or gedit in ubuntu
+1) sudo vi /etc/sudoers or sudo gedit /etc/sudoers
+2) add below line in sudoers file
+jenkins ALL=(ALL) NOPASSWD: ALL
+3)sudo systemctl restart jenkins 
+
+
 Issues while installating java in Ubuntu
 -------------------------------------
 '1) sudo apt install openjdk-8-jre-headless ( depend on which version u are installating)
