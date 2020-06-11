@@ -1,6 +1,6 @@
 Steps to install java:
 ----------------------
-sudo apt install openjdk-8-jre-headless
+sudo apt-get install default-jdk
 java -version
 
 Steps to install Maven
@@ -10,6 +10,8 @@ sudo apt install maven
 Steps to install Git
 ----------------------
 sudo apt install git
+git config --global user.name "JavaExpress"
+git config --global user.email "javaexpresschannel@gmail.com"
 
 Steps to install Jenkins
 ----------------------
@@ -36,7 +38,8 @@ export JAVA_HOME
 export JRE_HOME
 export PATH
 
-
+How to search java available in ubuntu ?
+apt search openjdk
 
 How to give sudo permissions for jenkins user in Ubuntu machine?
 
