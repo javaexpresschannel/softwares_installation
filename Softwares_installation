@@ -28,6 +28,15 @@ How to remove java manually from ubuntu ?
 -------------------------------------
 sudo rm -rf /usr/lib/jvm/*
 
+How to set java path in Ubuntu 
+-------------------------------------
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+export JAVA_HOME
+export JRE_HOME
+export PATH
+
+
 
 How to give sudo permissions for jenkins user in Ubuntu machine?
 
