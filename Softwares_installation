@@ -73,15 +73,14 @@ update-alternatives: warning: alternative /usr/lib/jvm/java-9-openjdk-amd64/bin/
 
 if still facing to install java then remove total java software from ubuntu machine
 
-3)sudo apt remove --purge openjdk-8-jre-headless ( depend on which version u are installating)
-4)sudo apt autoremove
-5)sudo apt install --reinstall openjdk-8-jre-headless
-6)java -version
+1)sudo apt remove --purge openjdk-8-jre-headless ( depend on which version u are installating)
+2)sudo apt autoremove
+3)sudo apt install --reinstall openjdk-8-jre-headless
+4)java -version
 
-java -version
-openjdk version "1.8.0_131"
-OpenJDK Runtime Environment (build 1.8.0_131-8u131-b11-2ubuntu1.16.04.3-b11)
-OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)
-
+javaexpress@javaexpress-VirtualBox:~$ java -version
+openjdk version "1.8.0_252"
+OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1ubuntu1-b09)
+OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
 
 
