@@ -1,0 +1,65 @@
+
+Steps to install masterNode
+------------------------------
+sudo yum -y install openjdk-8-jdk
+sudo yum -y install git
+sudo yum -y install maven
+sudo yum -y wget ( if needed)
+	
+Steps to install Jenkins
+------------------------------
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum -y install jenkins
+sudo systemctl start jenkins
+sudo systemctl enable --now jenkins
+
+How to enable shell console for jenkins user ?
+----------------------------------------------------------------
+Open a file using vi editor 
+sudo vi /etc/passwd
+for jenkins user change to /bin/bash
+
+How to give sudo permissions for jenkins user in Centos machine?
+----------------------------------------------------------------
+Open a file using vi editor 
+1) sudo vi /etc/sudoers 
+2) add below line in sudoers file
+jenkins ALL=(ALL) NOPASSWD: ALL
+3)sudo systemctl restart jenkins 
+ 
+
+Steps to install SlaveNode 
+------------------------------
+sudo yum -y install openjdk-8-jdk
+sudo yum -y install maven ( if u install maven ,automatically java will install in machine)
+sudo yum -y install git
+
+Change to Root user 
+------------------------------
+sudo su -
+How to create new user in Centos ?
+------------------------------
+sudo useradd jenkins
+sudo su jenkins 
+cd
+cd
+How to check current working directory ?
+----------------------------------------
+pwd - /var/lib/jenkins ( Home directory for jenkins in slave node)
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+cd ~/.ssh
+ssh-keygen -t rsa -C "The access key for Jenkins slaves"
+Type enter button for every question so that it will create default private key(id_rsa) and public key(id_rsa.pub)
+cat id_rsa.pub > ~/.ssh/authorized_keys
+cat id_rsa ( Copy private key and paste in jenkins node slave)
+
+
+
+
+
+
+
+
+
