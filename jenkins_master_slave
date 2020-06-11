@@ -31,13 +31,14 @@ jenkins ALL=(ALL) NOPASSWD: ALL
 
 Steps to install SlaveNode 
 ------------------------------
+Change to Root user 
+------------------------------
+sudo su -
 sudo yum -y install openjdk-8-jdk
 sudo yum -y install maven ( if u install maven ,automatically java will install in machine)
 sudo yum -y install git
 
-Change to Root user 
-------------------------------
-sudo su -
+
 How to create new user in Centos ?
 ------------------------------
 sudo useradd jenkins
