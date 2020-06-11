@@ -20,7 +20,7 @@ Open a file using vi editor
 sudo vi /etc/passwd
 for jenkins user change to /bin/bash
 
-How to give sudo permissions for jenkins user in Centos machine?
+How to give sudo permissions for jenkins user in Centos machine in Master Node?
 ----------------------------------------------------------------
 Open a file using vi editor 
 1) sudo vi /etc/sudoers 
@@ -45,6 +45,15 @@ sudo useradd jenkins
 sudo su jenkins 
 cd
 cd
+
+How to give sudo permissions for jenkins user in Centos machine in Slave Node?
+----------------------------------------------------------------
+Open a file using vi editor 
+1) sudo vi /etc/sudoers 
+2) add below line in sudoers file
+jenkins ALL=(ALL) NOPASSWD: ALL
+
+
 How to check current working directory ?
 ----------------------------------------
 pwd - /var/lib/jenkins ( Home directory for jenkins in slave node)
