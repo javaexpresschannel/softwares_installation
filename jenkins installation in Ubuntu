@@ -1,22 +1,4 @@
 
-How to remove jenkins from Ubuntu ?
-
-sudo service jenkins stop
-sudo apt-get remove --purge jenkins
-sudo apt-get remove --auto-remove jenkins
-
-
-How to remove java from Ubuntu ?
-sudo rm -rf /usr/lib/jvm/*
-sudo apt install openjdk-8-jre-headless --reinstall
-
-
-How to remove git from Ubuntu ?
-sudo apt-get purge --auto-remove gi
-
-How to remove open jdk from Ubuntu ?
-sudo rm -rf /usr/lib/jvm/*
- 
 
 Softwares Installation steps for Jenkins 
 ----------------------------------------
@@ -42,13 +24,33 @@ sudo apt install git
 
 Jenkins
 -------
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+sudo sysemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl restart jenkins
+sudo systemctl enable jenkins ( Bootup start) 
 
 
-lsb_release -a
-it will give information about your OS informatin & CodeName 
+How to remove jenkins from Ubuntu ?
+------------------------------------
+sudo service jenkins stop
+sudo apt-get remove --purge jenkins
+sudo apt-get remove --auto-remove jenkins
 
-apt policy jenkins
-glen@Xen2:~$ apt policy daemon
+
+How to remove java from Ubuntu ?
+------------------------------------
+sudo rm -rf /usr/lib/jvm/*
+sudo apt install openjdk-8-jre-headless --reinstall
+
+
+How to remove git from Ubuntu ?
+------------------------------------
+sudo apt-get purge --auto-remove gi
+
 
 
 
