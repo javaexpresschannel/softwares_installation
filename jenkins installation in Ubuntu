@@ -34,6 +34,16 @@ sudo systemctl restart jenkins
 sudo systemctl enable jenkins ( Bootup start) 
 
 
+
+How to give sudo permissions for jenkins user in Ubuntu machine?
+------------------------------------------------------------------
+Open a file using vi editor or gedit in ubuntu
+1) sudo vi /etc/sudoers or sudo gedit /etc/sudoers
+2) add below line in sudoers file
+jenkins ALL=(ALL) NOPASSWD: ALL
+3)sudo systemctl restart jenkins
+
+
 How to remove jenkins from Ubuntu ?
 ------------------------------------
 sudo service jenkins stop
