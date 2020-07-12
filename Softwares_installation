@@ -101,4 +101,8 @@ openjdk version "1.8.0_252"
 OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1ubuntu1-b09)
 OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
 
+lsb_release -a
+it will give information about your OS informatin & CodeName 
 
+apt policy jenkins
+glen@Xen2:~$ apt policy daemon
