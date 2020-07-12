@@ -1,1 +1,56 @@
 
+How to remove jenkins from Ubuntu ?
+
+sudo service jenkins stop
+sudo apt-get remove --purge jenkins
+sudo apt-get remove --auto-remove jenkins
+
+
+How to remove java from Ubuntu ?
+sudo rm -rf /usr/lib/jvm/*
+sudo apt install openjdk-8-jre-headless --reinstall
+
+
+How to remove git from Ubuntu ?
+sudo apt-get purge --auto-remove gi
+
+How to remove open jdk from Ubuntu ?
+sudo rm -rf /usr/lib/jvm/*
+ 
+
+Softwares Installation steps for Jenkins 
+----------------------------------------
+
+1) Java 
+2) Maven
+3) Git
+4) Jenkins
+
+Java Steps
+----------
+apt search openjdk
+sudo apt install openjdk-8-jdk
+java -version 
+
+Maven
+-----
+sudo apt install maven
+
+Git
+---
+sudo apt install git
+
+Jenkins
+-------
+
+
+lsb_release -a
+it will give information about your OS informatin & CodeName 
+
+apt policy jenkins
+glen@Xen2:~$ apt policy daemon
+
+
+
+
+
