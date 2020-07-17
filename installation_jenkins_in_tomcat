@@ -1,0 +1,49 @@
+How to install jenkins in tomcat (Ubuntu) ?
+------------------------------------------------
+The complete process to install Jenkins can be summarized in five steps:
+
+Install Java Version 8 – Jenkins is a Java based application, hence Java is a must.
+Install Apache Tomcat Version 9 – Tomcat is required to deploy Jenkins war file.
+Download Jenkins war File – This war is required to install Jenkins.
+Deploy Jenkins war File – Jenkins war file needs to be deployed using Tomcat to run Jenkins.
+Install Suggested Plugins – Install a list of plugins suggested by Jenkins.
+
+All Jenkins Tutorials available in below link
+------------------------------------------------
+https://www.youtube.com/playlist?list=PL87padGs1bp9X95IxGQtFW44qWzywhbHM
+
+Windows Installation for Jenkins 
+--------------------------------
+https://dzone.com/articles/how-to-install-jenkins-on-the-apache-tomcat-server
+
+1) sudo apt install java-1.8.0-openjdk
+2) wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M10/bin/apache-tomcat-9.0.0.M10.tar.gz
+3) tar xzf apache-tomat-9.0.0.M10.tar.gz
+4) mv apache-tomcat-9.0.0.M10 tomcat9
+5) gedit /home/edureka/tomcat9/conf/tomcat-users.xml
+6) update xml for below details
+
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+    <role rolename="manager-gui"/>
+    <role rolename="manager-script"/>
+    <role rolename="manager-jmx"/>
+    <role rolename="manager-jmx"/>
+    <role rolename="admin-gui"/>
+    <role rolename="admin-script"/>
+    <user username="java" password="express" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
+</tomcat-users>
+
+7) ./bin/startup.sh
+8) download war file directly or terminal
+  http://updates.jenkins-ci.org/download/war/ ( u can check version in jenkins updates)
+  wget http://updates.jenkins-ci.org/download/war/2.99/jenkins.war
+
+9) Deploy war file in tomcat using manager app in tomcat
+
+
+
+
+
+
+
