@@ -16,11 +16,11 @@ Windows Installation for Jenkins
 --------------------------------
 https://dzone.com/articles/how-to-install-jenkins-on-the-apache-tomcat-server
 
-1) sudo apt install java-1.8.0-openjdk
+1) sudo apt install openjdk-8-jdk  (sudo apt install java-1.8.0-openjdk)
 2) wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M10/bin/apache-tomcat-9.0.0.M10.tar.gz
 3) tar xzf apache-tomat-9.0.0.M10.tar.gz
 4) mv apache-tomcat-9.0.0.M10 tomcat9
-5) gedit /home/edureka/tomcat9/conf/tomcat-users.xml
+5) gedit /home/venkatabhaskar/tomcat9/conf/tomcat-users.xml
 6) update xml for below details
 
 <?xml version='1.0' encoding='utf-8'?>
